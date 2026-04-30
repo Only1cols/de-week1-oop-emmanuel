@@ -17,7 +17,7 @@
 A creational pattern where a factory method creates objects without exposing the creation logic. Used here in `NotifierFactory` to return either an `EmailNotifier` or `SMSNotifier` based on a string input.
 
 ## How to Run
-
+22
 ```bash
 python -m venv .venv && source .venv/bin/activate
 python -m libmini.cli
@@ -29,4 +29,3 @@ Project Structure
 	•	libmini/notify.py — Notifier, EmailNotifier, SMSNotifier, NotifierFactory
 	•	libmini/cli.py — CLI demo
 
-    

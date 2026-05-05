@@ -34,18 +34,11 @@ def main():
     library.borrow(member1, "ISBN001")
     library.borrow(member2, "iSBN002")
 
-    print(" borrowing books.....")
+    print(" Borrowing books: ")
     library.borrow(member1, "ISBN001")
     print(F" {member1.name} borrowed: Things fall apart")
     library.borrow(member2, "ISBN002")
     print(F" {member2.name} borrowed: Half of a yellow sun")
-
-    # send notifications
-    notifier = NotifierFactory.create("email")
-    print(notifier.send(member1.email, "you borrowed: Things Fall Apart"))
-
-    notifier2 = NotifierFactory.create("sms")
-    print(notifier2.send(member2.email, "you borrowed:Half of a yellow sun"))
 
     # loans
     print(f"{member1.name}'s current loaned books:")
@@ -62,6 +55,13 @@ def main():
     print("available biooks after return:")
     for book in library.available_books():
         print(f"  -{book.title} by {book.author}")
+
+    # send notifications
+    notifier = NotifierFactory.create("email")
+    print(notifier.send(member1.email, "you borrowed: Things Fall Apart"))
+
+    notifier2 = NotifierFactory.create("sms")
+    print(notifier2.send(member2.email, "you borrowed:Half of a yellow sun"))
 
 
 if __name__ == "__main__":

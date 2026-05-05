@@ -61,7 +61,7 @@ def main():
     print(notifier.send(member1.email, "you borrowed: Things Fall Apart"))
 
     notifier2 = NotifierFactory.create("sms")
-    print(notifier2.send(member2.email, "you borrowed:Half of a yellow sun"))
+    print(notifier2.send(member2.email, "you borrowed: Half of a yellow sun"))
 
 
 if __name__ == "__main__":

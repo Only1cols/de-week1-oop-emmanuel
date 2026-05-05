@@ -15,7 +15,7 @@ class EmailNotifier(Notifier):
 
 class SMSNotifier(Notifier):
     def send(self, receiver, message):
-        return f"Sms sent to{receiver}: {message}"
+        return f"Sms sent to {receiver}: {message}"
 
 
 class NotifierFactory:

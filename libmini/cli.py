@@ -52,7 +52,7 @@ def main():
     # return a book
     print("returning things fall apart......")
     library.return_book(member1, "ISBN001")
-    print("available biooks after return:")
+    print("available books after return:")
     for book in library.available_books():
         print(f"  -{book.title} by {book.author}")
 
